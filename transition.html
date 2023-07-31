@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+            width: 50px;
+            height: 50px;
+            border: 5px solid salmon;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: width 2s, height 2s;
+        }
+
+        .container > h1 {
+            color: rgba(255, 255, 255, 0);
+            transition: color 2s;
+        }
+
+        .container:hover {
+            width: 500px;
+            height: 500px;
+        }
+
+        .container:hover > h1 {
+            color: rgba(0, 0, 0, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello world</h1>
+    </div>
+</body>
+
+</html>
